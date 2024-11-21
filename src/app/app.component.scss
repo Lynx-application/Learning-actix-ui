@@ -5,4 +5,44 @@
 .main-view{
     height: 100%;
     width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.left, .right{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    font-size: x-small;
+}
+
+.left{
+    opacity: .5;
+    left: 20px;
+}
+
+.right{
+    opacity: .2;
+    right: 0;
+}
+
+.copyright{
+    font-size: x-small;
+    position: absolute;
+    transform: rotate(90deg);
+    top: 50%;
+    opacity: .7;
+    left: -90px;
+}
+
+.matrix{
+    display: grid;
+    gap: 10px;
+    font-size: x-small;
+    opacity: .5;
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    grid-template-columns: repeat(5, fit-content(0px));
+    grid-template-rows: repeat(2, fit-content(0px));
 }
