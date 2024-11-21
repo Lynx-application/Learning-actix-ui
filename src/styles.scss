@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/variables/color.scss';
+
+@font-face {
+    font-weight: 100;
+    font-family: raj;
+    src: url(./assets/font/Rajdhani-Light.ttf);
+}
+
+@font-face {
+    font-weight: 300;
+    font-family: raj;
+    src: url(./assets/font/Rajdhani-Regular.ttf)
+}
+
+@font-face {
+    font-weight: 500;
+    font-family: raj;
+    src: url(./assets/font/Rajdhani-Medium.ttf)
+}
+
+@font-face {
+    font-weight: 700;
+    font-family: raj;
+    src: url(./assets/font/Rajdhani-SemiBold.ttf)
+}
+
+@font-face {
+    font-weight: 900;
+    font-family: raj;
+    src: url(./assets/font/Rajdhani-Bold.ttf)
+}
+
+html,
+body {
+    color: $red;
+    font-family: raj;
+    padding: unset;
+    margin: unset;
+    width: 100vw;
+    height: 100vh;
+}
