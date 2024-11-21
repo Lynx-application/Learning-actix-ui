@@ -1,0 +1,25 @@
+@import '../../../assets/variables/color.scss';
+
+*{
+    font-weight: 100;
+    font-size: 18px;
+}
+
+.main-tabs{
+    display: flex;
+    gap: 15px;
+}
+
+.tab-item{
+    display: flex;
+    gap: 5px;
+
+    &.active{
+        color: $cyan;
+    }
+
+    &:hover{
+        cursor: pointer;
+        color: $green;
+    }
+}
