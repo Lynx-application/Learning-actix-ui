@@ -1,6 +1,32 @@
-<span>
-    <svg width="421" height="420" viewBox="0 0 421 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M420 403.5V281.5L407 266.5V157.5L420 142V12.5L407 1H1V44V409.25V415V419.5H30.5L36 415H407L420 403.5Z"
-            fill="#FF5F57" stroke="#FF5F57" />
+<span class="container">
+    <svg class="absolute-far" width="421" height="420" viewBox="0 0 421 420" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <clipPath id="myClipPath">
+                <path
+                    d="M420 403.5V281.5L407 266.5V157.5L420 142V12.5L407 1H1V44V409.25V415V419.5H30.5L36 415H407L420 403.5Z"
+                    fill="#FF5F57" stroke="#FF5F57" />
+            </clipPath>
+        </defs>
     </svg>
+    <span [style.backgroundImage]="'url(' + image + ')'" class="clipped">
+        <svg width="421" height="420" viewBox="0 0 421 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 415V419.5H30.5L36 415H407L413.5 409.25H1V415Z" fill="#FF5F57" />
+            <path
+                d="M413.5 409.25L420 403.5V281.5L407 266.5V157.5L420 142V12.5L407 1H1V44V409.25M413.5 409.25L407 415H36L30.5 419.5H1V415V409.25M413.5 409.25H1"
+                stroke="#FF5F57" />
+        </svg>
+    </span>
+    <span class="left">
+        <span class="name">
+            <svg width="473" height="72" viewBox="0 0 473 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.5 0.499634V71.4996H16.5V0.499634H0.5Z" fill="#FF5F57" fill-opacity="0.3" />
+                <path
+                    d="M16 70.9996H1V0.999634H16V70.9996ZM17 70.9996V0.999634L453.5 1.00012H472.5V44.293L445.793 71.0002L278.438 71.0004L17 70.9996Z"
+                    stroke="#FF5F57" />
+            </svg>
+            <span>{{pageData.title}}</span>
+        </span>
+        <span>{{pageData.description}}</span>
+    </span>
 </span>

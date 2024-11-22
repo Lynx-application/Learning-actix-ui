@@ -41,6 +41,7 @@ body {
     height: 100vh;
 }
 
+app-person,
 app-home{
     display: contents;
 }
@@ -55,4 +56,10 @@ app-home{
         aspect-ratio: 1/1;
         height: 18px;
     }
+}
+
+.absolute-far{
+    position: absolute;
+    top: 200000px;
+    right: 200000px;
 }

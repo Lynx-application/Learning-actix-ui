@@ -1,0 +1,13 @@
+<div class="main-contact">
+    <span class="left">
+        @for (message of messages; track $index) {
+        <span class="message">
+            <span class="sender">{{message.sender}}</span>
+            <span class="content">{{message.content}}</span>
+        </span>
+        }
+    </span>
+    <span class="right">
+        <textarea name="" id=""></textarea>
+    </span>
+</div>

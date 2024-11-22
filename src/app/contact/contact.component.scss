@@ -1,0 +1,40 @@
+@import '../../assets/variables/color.scss';
+
+.main-contact {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 10%;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15%;
+
+    .left {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .message {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border: 1px solid $red;
+            padding: 4px 8px;
+            width: 100%;
+
+            .sender {
+                font-size: small;
+                color: $green;
+            }
+
+            .content {
+                font-size: 22px;
+            }
+        }
+    }
+
+    .right{
+        flex-grow: 1;
+    }
+}
