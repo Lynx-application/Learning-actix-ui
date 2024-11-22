@@ -1,19 +1,28 @@
 @import '../../assets/variables/color.scss';
 
-.main-contact {
+.aligner {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+
+.main-contact {
+    width: calc(100% - 20%);
     height: 100%;
     display: flex;
-    gap: 10%;
     align-items: center;
     justify-content: center;
-    padding: 0 15%;
+    padding: 0 10%;
 
     .left {
         flex-grow: 1;
         display: flex;
         flex-direction: column;
         gap: 15px;
+        height: 50vh;
+        overflow: auto;
+        width: min-content;
 
         .message {
             display: flex;
@@ -21,7 +30,7 @@
             gap: 10px;
             border: 1px solid $red;
             padding: 4px 8px;
-            width: 100%;
+            min-width: 300px;
 
             .sender {
                 font-size: small;
@@ -34,7 +43,94 @@
         }
     }
 
-    .right{
+    .right {
         flex-grow: 1;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .abs {
+            position: relative;
+            height: 430px;
+            aspect-ratio: 1/1;
+        }
+
+        textarea {
+            position: absolute;
+            top: 0;
+            left: 0;
+            aspect-ratio: 1/1;
+            width: 390px;
+            outline: unset;
+            border: unset;
+            padding: 10px;
+            background-color: unset;
+            color: $red;
+            font-family: raj;
+            font-size: 22px;
+            direction: ltr;
+            resize: none;
+            z-index: 2;
+        }
+
+        .send-button {
+            display: flex;
+            gap: 10px;
+
+            .key {
+                padding: 3px;
+                border-radius: 2px;
+                border: 1px solid $red;
+                font-size: 12px;
+            }
+
+            .text {
+                color: $cyan;
+                font-size: 20px;
+            }
+
+            &:hover {
+                cursor: pointer;
+
+                * {
+                    border-color: $green;
+                    color: $green;
+                }
+            }
+        }
+
     }
+}
+
+@media screen and (max-width: 1100px) {
+
+    .aligner {
+        height: 100%;
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+
+    textarea {
+        width: calc(100% - 20px) !important;
+    }
+
+    svg {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .abs {
+        height: fit-content !important;
+    }
+
+    .left {
+        width: 100% !important;
+        height: 10% !important;
+    }
+
+    .message{
+        min-width: unset !important;
+    }
+
 }

@@ -1,13 +1,30 @@
 <div class="main-contact">
-    <span class="left">
-        @for (message of messages; track $index) {
-        <span class="message">
-            <span class="sender">{{message.sender}}</span>
-            <span class="content">{{message.content}}</span>
+    <div class="aligner">
+        <span class="left">
+            @for (message of messages; track $index) {
+            <span class="message">
+                <span class="sender">{{message.sender}} :</span>
+                <span class="content">{{message.content}} fdklsjfgkjdsf k jsgkjdfh k sdkfhg kjsdh kjh gkd gkjdf
+                    vnkjhiuvniuehwg iiughinewiuvbwijebrgiouvbw ghe riujgbiw</span>
+            </span>
+            }
         </span>
-        }
-    </span>
-    <span class="right">
-        <textarea name="" id=""></textarea>
-    </span>
+        <span class="right">
+            <span class="abs">
+                <textarea name="" cols="20" id=""></textarea>
+                <span class="svg-container">
+                    <svg width="421" height="420" viewBox="0 0 421 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 415V419.5H30.5L36 415H407L413.5 409.25H1V415Z" fill="#FF5F57" />
+                        <path
+                            d="M413.5 409.25L420 403.5V281.5L407 266.5V157.5L420 142V12.5L407 1H1V44V409.25M413.5 409.25L407 415H36L30.5 419.5H1V415V409.25M413.5 409.25H1"
+                            stroke="#FF5F57" />
+                    </svg>
+                </span>
+            </span>
+            <span class="send-button">
+                <span class="key">ENTER</span>
+                <span class="text">SEND</span>
+            </span>
+        </span>
+    </div>
 </div>
