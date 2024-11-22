@@ -1,0 +1,71 @@
+@import '../../assets/variables/color.scss';
+
+.main-home {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 10%;
+    display: flex;
+
+    .left {
+        display: flex;
+        flex-direction: column;
+
+        .title {
+            display: flex;
+            align-items: flex-end;
+            gap: 10px;
+
+            .pre {
+                font-size: 40px;
+            }
+
+            .title-text {
+                line-height: 90px;
+                color: $yellow;
+                font-weight: 900;
+                font-size: 120px;
+            }
+        }
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: min-content;
+
+        .attr-main {
+            position: relative;
+            width: fit-content;
+
+            .attr-text {
+                position: absolute;
+                font-size: 40px;
+                font-weight: 100;
+                top: 13%;
+                left: 10%;
+            }
+
+            &:hover {
+                color: $cyan;
+                cursor: pointer;
+
+                path {
+                    stroke: $cyan;
+
+                    &:first-of-type{
+                        fill: $cyan;
+                    }
+                }
+            }
+        }
+
+        .desc {
+            width: 100%;
+            word-wrap: break-word;
+            word-break: break-word;
+        }
+    }
+}

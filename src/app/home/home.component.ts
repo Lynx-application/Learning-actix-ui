@@ -8,5 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
     constructor() { }
 
+    pre: string = "We're";
+    title: string = "LYNX!";
+
     ngOnInit(): void { }
 }

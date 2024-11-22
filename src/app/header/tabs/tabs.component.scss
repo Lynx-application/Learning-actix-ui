@@ -1,25 +1,47 @@
 @import '../../../assets/variables/color.scss';
 
-*{
+* {
     font-weight: 100;
     font-size: 18px;
 }
 
-.main-tabs{
+.main-tabs {
     display: flex;
     gap: 15px;
 }
 
-.tab-item{
+.tab-item {
     display: flex;
     gap: 5px;
 
-    &.active{
+    &.active {
         color: $cyan;
     }
 
-    &:hover{
+    &:hover {
         cursor: pointer;
         color: $green;
+    }
+
+    span:last-of-type {
+        line-clamp: 1;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+
+    .main-tabs {
+        gap: 30px;
+
+        .tab-item {
+
+            span:last-of-type {
+                display: none;
+            }
+        }
     }
 }
