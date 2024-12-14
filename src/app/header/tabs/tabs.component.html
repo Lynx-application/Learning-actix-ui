@@ -1,5 +1,5 @@
 <span class="main-tabs">
-    <span class="{{activeMap[0] ? 'active':''}} tab-item home" routerLink="/home">  
+    <span class="{{activeMap[0] ? 'active':''}} tab-item home" routerLink="/home">
         <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="size-6">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -8,7 +8,8 @@
         </span>
         <span>HOME</span>
     </span>
-    <span class="{{activeMap[1] ? 'active':''}} tab-item person amirhosein" routerLink="/person/1">
+    @for (tab of tabs; track $index) {
+    <span class="{{activeMap[$index+1] ? 'active':''}} tab-item person amir" routerLink="/person/{{$index+1}}">
         <span class="icon">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="size-6">
@@ -16,29 +17,10 @@
                     d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
             </svg>
         </span>
-        <span>AMIRHOSEIN MARDANI</span>
+        <span>{{tab}}</span>
     </span>
-    <span class="{{activeMap[2] ? 'active':''}} tab-item person amirreza" routerLink="/person/2">
-        <span class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-            </svg>
-        </span>
-        <span>AMIRREZA REZAEI</span>
-    </span>
-    <span class="{{activeMap[3] ? 'active':''}} tab-item person amir" routerLink="/person/3">
-        <span class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-            </svg>
-        </span>
-        <span>AMIR ZAND</span>
-    </span>
-    <span class="{{activeMap[4] ? 'active':''}} tab-item person amir" routerLink="/contact">
+    }
+    <!-- <span class="{{activeMap[4] ? 'active':''}} tab-item person amir" routerLink="/contact">
         <span class="icon">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="size-6">
@@ -48,5 +30,5 @@
 
         </span>
         <span>CONTACT</span>
-    </span>
+    </span> -->
 </span>

@@ -1,14 +1,26 @@
 import { AfterContentChecked, Component, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
+import { PageService } from '../../services/page.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
     selector: 'app-tabs',
     templateUrl: './tabs.component.html',
     styleUrls: ['./tabs.component.scss'],
-    imports: [RouterLink]
+    imports: [HttpClientModule, RouterLink],
+    providers: [PageService],
 })
 export class TabsComponent implements OnInit, AfterContentChecked {
-    constructor(private router: Router) { }
+
+    constructor(private router: Router, private service: PageService) {
+        service.data.subscribe(value => {
+            console.log(value);
+
+            this.tabs = value.tabs
+        })
+    }
+
+    tabs: string[] = ["Benjamin Franklin", "Amir Parsi", "Rohallah Khomeini"]
 
     ngAfterContentChecked(): void {
         switch (this.router.url) {

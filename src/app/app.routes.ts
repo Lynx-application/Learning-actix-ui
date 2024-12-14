@@ -6,6 +6,6 @@ import { ConactComponent } from './contact/contact.component';
 export const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'person/:id', component: PersonComponent },
-    { path: 'contact', component: ConactComponent },
+    // { path: 'contact', component: ConactComponent },
     { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
